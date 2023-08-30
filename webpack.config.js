@@ -11,6 +11,7 @@ const commonConfig = {
   mode: process.env.ENV === "production" ? "production" : "development",
   output: {
     path: resolve("./dist"),
+    publicPath: "/dist",
   },
 };
 
@@ -36,11 +37,19 @@ export const bundles = /** @type {const} @satisfies {readonly string[]} */ ([
 
 export default await Promise.all(
   bundleConfigs.map(async (name) =>
-    merge(commonConfig, (await import(`./webpack.config.${name}.js`)).default, {
-      name,
-      plugins: [
-        new WebpackManifestPlugin({ fileName: `manifest.${name}.json` }),
-      ],
-    })
+    merge(
+      commonConfig,
+      {
+        name,
+        plugins: [
+          new WebpackManifestPlugin({
+            fileName: `manifest.${name}.json`,
+          }),
+        ],
+      },
+      (
+        await import(`./webpack.config.${name}.js`)
+      ).default
+    )
   )
 );

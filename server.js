@@ -43,10 +43,7 @@ const requestListener = async (request, response) => {
       font-family: IBM Plex Mono, Menlo, monospace;
   }
   </style>
-  <script type="module" src="${assetMap[build ?? "web"]?.["main.js"].replace(
-    /^auto\//,
-    "/dist/"
-  )}"></script>
+  <script type="module" src="${assetMap[build ?? "web"]?.["main.js"]}"></script>
 </head>
 <body>
 	<h1>Various Webpack configs</h1>
