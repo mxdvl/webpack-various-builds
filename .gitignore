@@ -1,7 +1,10 @@
 # local
 node_modules
 dist
-*.generated.js
+.generated
+
+# IDE
+.vscode
 
 # system
 DS_Store

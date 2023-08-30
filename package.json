@@ -19,7 +19,6 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/mxdvl/webpack-various-builds#readme",
   "devDependencies": {
-    "@guardian/libs": "15.7.1",
     "@types/node": "18.17.12",
     "date-fns": "2.30.0",
     "dayjs": "1.11.9",
