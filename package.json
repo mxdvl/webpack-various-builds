@@ -1,0 +1,34 @@
+{
+  "name": "webpack-various-builds",
+  "private": true,
+  "description": "Testing various webpack configurations being dynamically built",
+  "type": "module",
+  "scripts": {
+    "build": "rimraf dist && webpack",
+    "check": "tsc",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mxdvl/webpack-various-builds.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "@mxdvl",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/mxdvl/webpack-various-builds#readme",
+  "devDependencies": {
+    "@guardian/libs": "15.7.1",
+    "@types/node": "18.17.12",
+    "date-fns": "2.30.0",
+    "dayjs": "1.11.9",
+    "moment": "2.29.4",
+    "rimraf": "5.0.1",
+    "typescript": "5.1.3",
+    "webpack": "5.88.2",
+    "webpack-cli": "5.1.4",
+    "webpack-manifest-plugin": "5.0.0",
+    "webpack-merge": "5.9.0"
+  }
+}
