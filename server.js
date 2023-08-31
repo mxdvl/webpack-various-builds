@@ -25,4 +25,4 @@ const html = (bundle) => `<!DOCTYPE html>
 
 console.log(assetMap);
 
-console.log(html("bundle.web.js"));
+console.log(html("bundle.web.variant.1.js"));
